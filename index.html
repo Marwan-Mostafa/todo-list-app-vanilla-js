@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-        <title>TO-DO List</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="todo-app">
-                <h2>To-Do List <img src="images/icon.png"></h2>
-                
-                <div class="row">
-                    <input type="text" id="input-box" placeholder="Add your text">
-                    <button onclick="addTask()">Add</button>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-                <ul id="list-container"></ul>
-            </div>
+<div class="container">
+    <div class="todo-app">
+        <h2>To-Do List</h2>
+
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task">
+            <button id="add-btn">Add</button>
         </div>
-        <script src="script.js"></script>
-    </body>
+
+        <div class="filters">
+            <button id="all" class="filter-btn active">All</button>
+            <button id="completed" class="filter-btn">Completed</button>
+            <button id="pending" class="filter-btn">Pending</button>
+        </div>
+
+        <p id="task-count"></p>
+
+        <ul id="list-container"></ul>
+
+        <button id="clear-all">Clear All</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
