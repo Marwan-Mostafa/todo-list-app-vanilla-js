@@ -62,6 +62,9 @@ function renderTasks() {
 
 addBtn.addEventListener("click", addTask);
 
-inputBox.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") addTask();
+inputBox.addEventListener("keydown", (e) => {
+    if (e.key === "Enter"){
+        e.preventDefault();
+        addTask();
+    }
 });
